@@ -234,19 +234,34 @@ export default function AboutPage() {
                         <h2 className="text-3xl lg:text-4xl font-bold text-white">Education</h2>
                     </div>
 
-                    <div className="glass-card rounded-2xl p-8 border border-slate-700/50">
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-cyan-500 flex items-center justify-center shrink-0">
-                                <GraduationCap className="text-white" size={24} />
+                    <div className="space-y-6">
+                        <div className="glass-card rounded-2xl p-8 border border-slate-700/50">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-cyan-500 flex items-center justify-center shrink-0">
+                                    <GraduationCap className="text-white" size={24} />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-white mb-1">Australian National University (ANU), Canberra ACT</h3>
+                                    <p className="text-slate-400 mb-3">2026 – Present</p>
+                                    <p className="text-slate-300 leading-relaxed">
+                                        Master’s of Computing
+                                    </p>
+                                </div>
                             </div>
-                            <div className="flex-1">
-                                <h3 className="text-xl font-bold text-white mb-1">Nursing Student</h3>
-                                <p className="text-slate-400 mb-3">Healthcare Institution</p>
-                                <p className="text-slate-300 leading-relaxed">
-                                    Pursuing nursing education while developing technical expertise. This unique combination
-                                    provides a distinctive perspective on user experience and the importance of creating
-                                    accessible, intuitive digital solutions.
-                                </p>
+                        </div>
+
+                        <div className="glass-card rounded-2xl p-8 border border-slate-700/50">
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-cyan-500 flex items-center justify-center shrink-0">
+                                    <GraduationCap className="text-white" size={24} />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-white mb-1">Management Education and Research Institute (MERI), GGSIPU</h3>
+                                    <p className="text-slate-400 mb-3">2021 – 2024</p>
+                                    <p className="text-slate-300 leading-relaxed">
+                                        Bachelor of Computer Applications (BCA) – CGPA 8.16
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
