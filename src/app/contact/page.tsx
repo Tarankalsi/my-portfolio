@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Send, Github, Linkedin, MapPin, Terminal } from 'lucide-react';
+import { Mail, MessageSquare, Send, Github, Linkedin, MapPin, Terminal, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactPage() {
@@ -57,6 +57,13 @@ export default function ContactPage() {
       value: '@Tarankalsi',
       href: 'https://github.com/Tarankalsi',
       color: 'from-pink-500 to-purple-500',
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+61 0478132139',
+      href: 'tel:+610478132139',
+      color: 'from-green-500 to-teal-500',
     },
   ];
 
@@ -225,7 +232,7 @@ export default function ContactPage() {
             {[
               { icon: Github, href: 'https://github.com/tarankalsi', label: 'GitHub' },
               { icon: Linkedin, href: 'https://linkedin.com/in/kalsitaran', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:taranjitsinghdelhi@gmail.com', label: 'Email' },
+              { icon: Mail, href: 'mailto:taranjitsinghdelhi@gmail.com', label: 'Email' }
             ].map((social) => (
               <a
                 key={social.label}
