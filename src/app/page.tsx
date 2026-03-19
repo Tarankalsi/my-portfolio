@@ -50,8 +50,8 @@ export default function Home() {
     experience: 1,
     passion: "Solving Problems with Code",
     contact: {
-      email: "taranjitsinghdelhi@gmail.com",
-      contact_number: "+61 478132139",
+      email: "contact@tarankalsi.dev",
+      contact_number: "+61 478 132139",
       github: "Tarankalsi"
     }
   };

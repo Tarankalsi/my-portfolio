@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Project } from '@/src/lib/project';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 
@@ -12,6 +13,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,15 +26,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <Link href={`/projects/${project.id}`} className="block">
         <div className="glass-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-300">
           {/* Project Image */}
-          <div className="relative h-56 overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"></div>
-          </div>
+          {imageError ? (
+            <div className="relative h-56 bg-linear-to-br from-slate-800 to-slate-900 overflow-hidden">
+              <div className="absolute inset-0 grid-pattern opacity-20"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"></div>
+              
+              {/* Minimal Icon */}
+              <div className="absolute bottom-4 right-4">
+                <div className="w-12 h-12 rounded-lg bg-slate-800/80 border border-slate-700 flex items-center justify-center">
+                  <span className="text-2xl">💻</span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="relative h-56 overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                onError={() => setImageError(true)}
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+          )}
 
           {/* Content */}
           <div className="p-6">
