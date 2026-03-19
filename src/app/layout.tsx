@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: "Anginat - Full-Stack Developer",
+  title: "Taran - Full-Stack Developer",
   description: "Full-Stack Developer specializing in Event & Education Management Systems",
   keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js"],
 };
