@@ -261,7 +261,7 @@ export default function ProjectsPage() {
                 <ul className="space-y-2">
                   {category.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-400">
-                      <span className="text-purple-400 mt-1 flex-shrink-0">▸</span>
+                      <span className="text-purple-400 mt-1 shrink-0">▸</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -324,7 +324,7 @@ export default function ProjectsPage() {
                     className="w-full h-full border-0"
                     sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 <div className="p-6">
