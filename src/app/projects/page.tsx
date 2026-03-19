@@ -19,7 +19,9 @@ import {
   Cloud,
   Code2,
   Layers,
-  Activity
+  Activity,
+  ExternalLink,
+  ArrowRight,
 } from 'lucide-react';
 import { Project, projects } from '@/src/lib/project';
 import ProjectCard from '@/src/components/ProjectCard';
@@ -159,6 +161,24 @@ export default function ProjectsPage() {
     { label: 'Integrations', value: '15+', icon: Globe },
   ];
 
+  const uiPrototypes = [
+    {
+      title: 'Restaurant UI Prototype',
+      description: 'Frontend-only interface showcasing a modern restaurant ordering experience.',
+      href: 'https://restaurant-frontend-gold-five.vercel.app/',
+    },
+    {
+      title: 'Medical Clinic UI Prototype',
+      description: 'Prototype for a medical clinic dashboard and appointment flow.',
+      href: 'https://prototype-medical-clininc-system.vercel.app/',
+    },
+    {
+      title: 'Vogue Vista UI Prototype',
+      description: 'Stylized fashion landing page prototype with a sleek UI.',
+      href: 'https://vogue-vista-pqoy.vercel.app/',
+    },
+  ];
+
   return (
     <div className="min-h-screen px-6 lg:px-12 py-20">
       <div className="max-w-7xl mx-auto">
@@ -265,6 +285,61 @@ export default function ProjectsPage() {
           <div className="grid lg:grid-cols-2 gap-6 mb-12">
             {projects.map((project: Project, index: number) => (
               <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        </motion.section>
+
+        {/* UI Prototypes */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="flex items-center gap-3 mb-12">
+            <ExternalLink className="text-pink-400" size={32} />
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">UI Prototypes</h2>
+          </div>
+          <p className="text-slate-400 mb-12 max-w-3xl">
+            These are frontend-only prototype UIs deployed on Vercel (no backend functionality).
+          </p>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {uiPrototypes.map((proto) => (
+              <motion.a
+                key={proto.href}
+                href={proto.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                className="glass-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all group"
+              >
+                <div className="relative h-64 bg-slate-900/50">
+                  <iframe
+                    src={proto.href}
+                    title={proto.title}
+                    className="w-full h-full border-0"
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-xl bg-linear-to-br from-pink-500 to-purple-500 group-hover:scale-110 transition-transform">
+                      <ExternalLink className="text-white" size={24} />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">{proto.title}</h3>
+                  </div>
+                  <p className="text-slate-400 mb-6">{proto.description}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 group-hover:text-white">
+                    Open Prototype <ArrowRight size={16} />
+                  </span>
+                </div>
+              </motion.a>
             ))}
           </div>
         </motion.section>
