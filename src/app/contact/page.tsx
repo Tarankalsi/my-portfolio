@@ -41,7 +41,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'taranjitsinghdelhi@gmail.com',
+      value: 'contact@tarankalsi.dev',
       href: 'mailto:taranjitsinghdelhi@gmail.com',
       color: 'from-purple-500 to-pink-500',
     },
