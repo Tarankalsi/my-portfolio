@@ -61,8 +61,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+61 0478132139',
-      href: 'tel:+610478132139',
+      value: '+61 478 132 139',
+      href: 'tel:+61 478 132 139',
       color: 'from-green-500 to-teal-500',
     },
   ];
