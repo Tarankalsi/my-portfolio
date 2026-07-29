@@ -65,8 +65,8 @@ export default function Home() {
         <div className="absolute inset-0 grid-pattern"></div>
         
         {/* Floating Orbs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 right-1/4 w-56 h-56 sm:w-96 sm:h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-56 h-56 sm:w-96 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
 
         <div className="max-w-5xl mx-auto relative z-10 w-full">
           <motion.div
@@ -90,7 +90,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-6xl lg:text-8xl font-bold mb-4 leading-tight"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight"
             >
               <span className="text-white">Taran</span>
             </motion.h1>
@@ -100,9 +100,9 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="mb-8 h-20"
+              className="mb-8 min-h-16 sm:min-h-20"
             >
-              <div className="text-3xl lg:text-5xl font-bold text-gradient animate-gradient">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient animate-gradient">
                 {displayText}
                 <span className="animate-terminal-blink">|</span>
               </div>
@@ -128,7 +128,7 @@ export default function Home() {
             >
               <Link
                 href="/projects"
-                className="group px-8 py-4 bg-linear-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 animate-glow"
+                className="group px-8 py-4 bg-gradient-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 animate-glow"
               >
                 View My Work
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -262,7 +262,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-linear-glow rounded-xl font-bold text-lg text-white shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 animate-glow"
+              className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-glow rounded-xl font-bold text-lg text-white shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 animate-glow"
             >
               <TerminalIcon size={24} />
               Start a Project

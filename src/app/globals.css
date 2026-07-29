@@ -18,6 +18,7 @@
     background: #0a0118;
     color: #e2e8f0;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
   }
 
   .dark body {
@@ -140,4 +141,46 @@
 
 .animate-gradient {
   animation: gradient-animation 3s ease infinite;
+}
+
+/* Floating orbs */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulsing glow on primary CTAs */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(131, 56, 236, 0.6);
+  }
+}
+
+.animate-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Terminal cursor blink */
+@keyframes terminal-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.animate-terminal-blink {
+  animation: terminal-blink 1s step-start infinite;
 }

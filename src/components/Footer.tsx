@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-slate-500 text-sm font-mono">
-            © {currentYear} Anginat. Crafted with{' '}
+            © {currentYear} Taran Kalsi. Crafted with{' '}
             <span className="text-pink-400">♥</span> and{' '}
             <span className="text-cyan-400">code</span>
           </div>

@@ -50,19 +50,19 @@ export default function Terminal({ title = '~/portfolio', data, className = '' }
         // Array value
         if (Array.isArray(value)) {
             return (
-                <>
+                <span className="inline-flex flex-wrap items-baseline gap-x-1">
                     <span className="text-slate-400">[</span>
                     {value.map((item: any, index) => (
                         <span key={index}>
                             {typeof item === 'string' && <span className="text-yellow-300">"{item}"</span>}
                             {typeof item === 'number' && <span className="text-cyan-300">{item}</span>}
                             {typeof item === 'boolean' && <span className="text-orange-400">{item.toString()}</span>}
-                            {index < value.length - 1 && <span className="text-slate-600">, </span>}
+                            {index < value.length - 1 && <span className="text-slate-600">,</span>}
                         </span>
                     ))}
                     <span className="text-slate-400">]</span>
                     {!isLast && <span className="text-slate-600">,</span>}
-                </>
+                </span>
             );
         }
 
@@ -72,9 +72,9 @@ export default function Terminal({ title = '~/portfolio', data, className = '' }
             return (
                 <>
                     <span className="text-cyan-400">{'{'}</span>
-                    <div className="ml-8">
+                    <div className="ml-4 sm:ml-8">
                         {entries.map(([nestedKey, nestedValue], index) => (
-                            <div key={nestedKey} className="flex gap-2">
+                            <div key={nestedKey} className="flex flex-wrap gap-x-2 gap-y-1">
                                 <span className="text-pink-400">{nestedKey}:</span>
                                 {renderValue(nestedValue, index === entries.length - 1)}
                             </div>
@@ -112,7 +112,7 @@ export default function Terminal({ title = '~/portfolio', data, className = '' }
                     </div>
 
                     {/* Terminal Content */}
-                    <div className="p-6 code-block space-y-2 text-slate-300">
+                    <div className="p-6 code-block space-y-2 text-slate-300 overflow-x-auto">
                         <div className="flex gap-2">
                             <span className="text-green-400">❯</span>
                             <span className="text-purple-400">const</span>
@@ -120,9 +120,9 @@ export default function Terminal({ title = '~/portfolio', data, className = '' }
                             <span className="text-slate-400">=</span>
                             <span className="text-cyan-400">{'{'}</span>
                         </div>
-                        <div className="ml-8">
+                        <div className="ml-4 sm:ml-8">
                             {entries.map(([key, value], index) => (
-                                <div key={key} className="flex gap-2">
+                                <div key={key} className="flex flex-wrap gap-x-2 gap-y-1">
                                     <span className="text-pink-400">{key}:</span>
                                     {renderValue(value, index === entries.length - 1)}
                                 </div>

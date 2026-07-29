@@ -24,7 +24,7 @@ const {id} = await params;
   }
 
   return {
-    title: `${project.title} - Anginat`,
+    title: `${project.title} - Taran Kalsi`,
     description: project.description,
   };
 }
@@ -81,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-linear-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
               >
                 <ExternalLink size={20} />
                 Live Demo
@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
           ) : (
             <div className="absolute inset-0 bg-linear-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-linear-glow flex items-center justify-center animate-float">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-gradient-glow flex items-center justify-center animate-float">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
                 <p className="text-slate-400 font-mono">Project Screenshot</p>
@@ -172,7 +172,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-linear-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-glow rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
           >
             Let's Talk
             <ArrowLeft className="rotate-180" size={20} />
