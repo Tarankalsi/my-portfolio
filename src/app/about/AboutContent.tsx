@@ -98,7 +98,7 @@ export default function AboutContent() {
                                 This interest led me to pursue a Bachelor of Computer Applications (BCA), followed by over one year of professional experience as a full-stack developer, where I worked on building and maintaining real-world, scalable applications.
                             </p>
                             <p>
-                                This year (2026), I'm about to start my <strong>Master’s degree at the Australian National University (ANU)</strong>, a member of Australia’s Group of Eight, to deepen my technical and problem-solving skills on a global level.
+                                This year (2026), I'm pursuing <strong>a Master of Computing at the Australian National University (ANU)</strong>, a member of Australia’s Group of Eight, to deepen my technical and problem-solving skills.
                             </p>
                             <p>
                                 I’m known for my strong problem-solving ability and creative mindset. I can quickly deliver short-term solutions in urgent situations, while also planning and implementing long-term, sustainable fixes to prevent future issues. I enjoy breaking down complex problems and finding the most effective path forward.

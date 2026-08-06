@@ -12,9 +12,7 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const roles = [
     'Full-Stack Developer',
-    'React Specialist',
     'Problem Solver',
-    'Creative Coder',
     'Tech Enthusiast',
   ];
 
